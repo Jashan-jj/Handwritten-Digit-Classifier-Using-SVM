@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Digit Classifier</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/script/script.js" defer></script>
+</head>
+<body>
+
+<div class="app-wrapper">
+    <div class="card">
+
+        <!-- Title -->
+        <div class="title-section">
+            <h1>Handwritten Digit Classifier</h1>
+            <p>SVM trained on MNIST dataset</p>
+        </div>
+
+        <!-- Canvas Section -->
+        <div class="canvas-section">
+            <div class="canvas-container">
+                <canvas id="draw-canvas" width="280" height="280"></canvas>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-section">
+            <button class="btn predict-btn">Predict</button>
+            <button class="btn clear-btn">Clear</button>
+        </div>
+
+        <!-- Prediction Box -->
+        <div class="prediction-box">
+            <span class="prediction-label">Predicted Digit</span>
+            <div class="prediction-value">—</div>
+        </div>
+
+        <!-- Probability Section -->
+        <div class="probability-section">
+            <h2>Prediction Probabilities</h2>
+
+            <div class="probability-chart">
+                <!-- Repeat for digits 0–9 -->
+                <div class="prob-column">
+                    <div class="bar-container">
+                        <div class="bar-fill" style="height: 0%"></div>
+                    </div>
+                    <span class="prob-value">0.00</span>
+                    <span class="digit-label">0</span>
+                </div>
+
+                <!-- Duplicate block for 1–9 -->
+                <!-- You will update heights dynamically via JS -->
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">1</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">2</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">3</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">4</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">5</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">6</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">7</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">8</span></div>
+                <div class="prob-column"><div class="bar-container"><div class="bar-fill"></div></div><span class="prob-value">0.00</span><span class="digit-label">9</span></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
